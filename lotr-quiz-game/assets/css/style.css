@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap');
+
+:root {
+    background: rgb(198, 172, 241);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: Oxanium, sans-serif;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: rgb(95, 48, 215);
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.home-h2 {
+    font-size: 2.5rem;
+    color: rgb(95, 48, 215);
+}
+
+.container {
+    background: url('../images/minas-tirith-container-image.jpeg') no-repeat center center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* Allows hide and display of quiz and results areas */
+
+.hide {
+    display: none;
+}
+
+/* Buttons */
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(214, 194, 244);
+    background: linear-gradient(90deg, rgba(26,9,165,1) 9%, rgba(54,16,140,1) 43%, rgba(155,88,215,1) 100%);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Header */
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+#lotr {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 3rem;
+}
+
+#menu {
+    text-align: center;
+    font-size: 10rem;
+    margin-top: -3rem;
+    line-height: 30px;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+/* About LoTR Page */
+
+#about-container {
+    width: 100%;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 4fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 5rem;
+    row-gap: 5rem;
+    grid-template-areas:
+    'abt-h2 abt-h2 abt-h2 abt-h2 abt-h2 abt-h2'
+    'bg-info bg-info bg-info jrr jrr jrr'
+    'fpic fpic fpic fotr fotr fotr'
+    'tt tt tt tpic tpic tpic'
+    'rpic rpic rpic rotk rotk rotk'
+}
+
+#about-container h2 {
+    color: rgb(95, 48, 215);;
+    margin-bottom: -0.7rem;
+}
+
+#about-container p {
+    font-size: 1.55rem;
+    line-height: 2.2rem;
+}
+
+.about-box {
+    border: 1px solid rgb(126, 82, 237);
+    border-radius: 10px;
+    max-width: 95%;
+    height: auto;
+    padding: 1rem;
+}
+
+.abt-h2 {
+    grid-area: abt-h2;
+    font-size: 3.5rem;
+    text-align: center;
+    color: rgb(108, 9, 221);
+    text-transform: uppercase;
+}
+
+.bg-info {
+    grid-area: bg-info;
+    margin: 0 1.5rem;
+}
+
+.jrr {
+    grid-area: jrr;
+    background: url('../images/bg-info-accompanying-image.jpeg') no-repeat center center;
+    background-size: cover;
+    margin: 0 1.5rem
+}
+
+.fpic {
+    grid-area: fpic;
+    background: url('../images/fotr-acompanying-image.jpeg') no-repeat center center;
+    background-size: cover;
+    margin: 0 1.5rem
+}
+
+.tpic {
+    grid-area: tpic;
+    background: url('../images/tt-acompanying-image.jpeg') no-repeat center center;
+    background-size: cover;
+    margin: 0 1.5rem
+}
+
+.rpic {
+    grid-area: rpic;
+    background: url('../images/rotk-accompanying-image.jpeg') no-repeat center center;
+    background-size: cover;
+    margin: 0 1.5rem
+}
+
+.fotr {
+    grid-area: fotr;
+    margin: 0 1.5rem;
+}
+
+.tt {
+    grid-area: tt;
+    margin: 0 1.5rem;
+}
+
+.rotk {
+    grid-area: rotk;
+    margin: 0 1.5rem;
+}
+
+hr {
+    border: 1px solid rgb(126, 82, 237);
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Results Page */
+
+.results-h1 {
+    font-size: 3.5rem;
+}
+
+.results-h2 {
+    font-size: 2.5rem;
+    color: rgb(95, 48, 215);
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+/* Media Queries */
+
+/* For large screens max-width 1920px and lower */
+
+@media screen and (max-width: 1920px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .jrr, .fpic, .tpic, .rpic {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #about-container {
+        width: auto;
+        padding: 20px 0 50px 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        column-gap: 5rem;
+        row-gap: 2rem;
+        grid-template-areas:
+        '. abt-h2 abt-h2 abt-h2 abt-h2 .'
+        '. bg-info bg-info bg-info bg-info .'
+        '. fotr fotr fotr fotr .'
+        '. tt tt tt tt .'
+        '. rotk rotk rotk rotk .';
+    }
+    .jrr, .fpic, .tpic, .rpic {
+        display: none;
+    }
+}
+
+/* For smaller screens up to 900px */
+
+@media screen and (max-width: 900px) {
+    #about-container {
+        grid-template-areas: 
+        'abt-h2 abt-h2 abt-h2 abt-h2 abt-h2 abt-h2'
+        'bg-info bg-info bg-info bg-info bg-info bg-info'
+        'fotr fotr fotr fotr fotr fotr'
+        'tt tt tt tt tt tt'
+        'rotk rotk rotk rotk rotk rotk';
+    }
+}

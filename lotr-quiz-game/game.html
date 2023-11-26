@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <title>Lord of The Rings Quiz! - The Quiz</title>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar-->
+    <header>
+        <a href="index.html">
+            <h1 id="lotr">Lord of The Rings - Quiz</h1>
+        </a>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html">About LoTR</a>
+                </li>
+                <li>
+                    <a href="game.html">Restart Quiz</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main game div -->
+    <div class="container hide" id="game-page">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull">
+                        </div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 id="score" class="hud-main-text">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">Question
+            </h1>
+            <div class="questions-container">
+                <p class="choice-letter">A</p>
+                <p class="choice-text" data-number="1">Option 1</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">B</p>
+                <p class="choice-text" data-number="2">Option 2</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">C</p>
+                <p class="choice-text" data-number="3">Option 3</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">D</p>
+                <p class="choice-text" data-number="4">Option 4</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Results page -->
+    <div class="container hide" id="results-page">
+        <div id="results" class="flex-center flex-column">
+            <h1 class="results-h1">You scored: <span class="results-h1" id="final-score"></span>/110!</h1>
+            <h2 id="results-quote" class="results-h2"></h2>
+            <h2 class="results-h2">Where do you want to go, now?</h2>
+            <a href="about.html" class="btn">About LoTR</a>
+            <a href="game.html" class="btn">Restart Game</a>
+            <a href="index.html" class="btn">Go Home</a>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
